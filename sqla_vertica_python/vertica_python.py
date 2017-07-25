@@ -7,6 +7,8 @@ from sqlalchemy.engine import reflection
 class VerticaDialect(PGDialect):
     """ Vertica Dialect using a vertica-python connection and PGDialect """
 
+    supports_sane_rowcount = True
+    
     name = 'vertica'
 
     driver = 'vertica_python'
